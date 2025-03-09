@@ -1,0 +1,19 @@
+model 6444fa3b-ad44-4bb4-a3f9-0cb97401a479
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["exec_requests_history","long_running_queries","frequently_run_queries","exec_sessions_history","DiabeteWithMoreData","Diabetes01","DiabeteFromParquet"]
+
+annotation SourceLineageTagType = DatabaseFullyQualifiedName
+
+ref table Diabetes01
+ref table DiabeteFromParquet
+ref table DiabeteWithMoreData
+

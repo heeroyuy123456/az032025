@@ -1,0 +1,198 @@
+table DiabeteWithMoreData
+	lineageTag: c259c487-a9d7-44cf-9ea4-04c422d16833
+	sourceLineageTag: [dbo].[DiabeteWithMoreData]
+
+	column AGE
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6ca783a5-1836-4107-899d-7a5c03171ebc
+		sourceLineageTag: AGE
+		summarizeBy: sum
+		sourceColumn: AGE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEX
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 15356669-e963-4dff-83f1-7747569ac8da
+		sourceLineageTag: SEX
+		summarizeBy: sum
+		sourceColumn: SEX
+
+		annotation SummarizationSetBy = Automatic
+
+	column BMI
+		dataType: double
+		sourceProviderType: float
+		lineageTag: b388337a-3107-4e97-ae70-886f6e817dfc
+		sourceLineageTag: BMI
+		summarizeBy: sum
+		sourceColumn: BMI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BP
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ae802676-914e-4324-b626-c36542744f30
+		sourceLineageTag: BP
+		summarizeBy: sum
+		sourceColumn: BP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S1
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b410c3df-0473-49c7-8aa7-4313f719a780
+		sourceLineageTag: S1
+		summarizeBy: sum
+		sourceColumn: S1
+
+		annotation SummarizationSetBy = Automatic
+
+	column S2
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ceb72d41-5f08-4b48-9ecb-7b47880bd0cf
+		sourceLineageTag: S2
+		summarizeBy: sum
+		sourceColumn: S2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S3
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 51b2550a-b430-401c-aced-34d089e53960
+		sourceLineageTag: S3
+		summarizeBy: sum
+		sourceColumn: S3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S4
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 1a5f27f8-b6a6-46aa-ba0e-39abbeabb951
+		sourceLineageTag: S4
+		summarizeBy: sum
+		sourceColumn: S4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S5
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 3e8cbaaa-5ccc-4651-827c-70a40fb4edc2
+		sourceLineageTag: S5
+		summarizeBy: sum
+		sourceColumn: S5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S6
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3b9c9f80-4733-4042-89f3-70134b022fba
+		sourceLineageTag: S6
+		summarizeBy: sum
+		sourceColumn: S6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Y
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 043f9d67-8a6f-4e3f-9740-b0de44f6bd38
+		sourceLineageTag: Y
+		summarizeBy: sum
+		sourceColumn: Y
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdateDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d7b90c09-9095-4388-a960-7b28a99083af
+		sourceLineageTag: UpdateDate
+		summarizeBy: none
+		sourceColumn: UpdateDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9ca1e75d-df6d-45ab-adca-0a4c16b3ec40
+		sourceLineageTag: Count
+		summarizeBy: sum
+		sourceColumn: Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avg_BMI
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 087d1cbf-1f18-4c2c-9734-bfd8eb45cd5e
+		sourceLineageTag: Avg_BMI
+		summarizeBy: sum
+		sourceColumn: Avg_BMI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Med_BMI
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 7d8e3927-9325-4901-8599-e329429442fd
+		sourceLineageTag: Med_BMI
+		summarizeBy: sum
+		sourceColumn: Med_BMI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Min_BP
+		dataType: double
+		sourceProviderType: float
+		lineageTag: a48c4e1d-53b1-4ab8-9566-17e757143274
+		sourceLineageTag: Min_BP
+		summarizeBy: sum
+		sourceColumn: Min_BP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition DiabeteWithMoreData-2dacb6af-49c0-49c4-b2a1-e39b1d49ebb8 = entity
+		mode: directLake
+		source
+			entityName: DiabeteWithMoreData
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation IsTableInBiModel = True
+
