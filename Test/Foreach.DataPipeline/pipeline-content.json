@@ -1,0 +1,165 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Lookup1",
+        "type": "Lookup",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "DataWarehouseSource",
+            "sqlReaderQuery": "SELECT * FROM Ctrl WHERE isActif =1\n",
+            "queryTimeout": "02:00:00",
+            "partitionOption": "None"
+          },
+          "firstRowOnly": false,
+          "datasetSettings": {
+            "annotations": [],
+            "linkedService": {
+              "name": "TestWareHouse",
+              "properties": {
+                "annotations": [],
+                "type": "DataWarehouse",
+                "typeProperties": {
+                  "endpoint": "5ki3rr6lzeruvnbsxxxwxcooim-d37ngv6llccetbivqi4ljvyloi.datawarehouse.fabric.microsoft.com",
+                  "artifactId": "4f2562cd-5fb4-4826-a6fe-e32c278e2b95",
+                  "workspaceId": "57d3fe1e-58cb-4984-8515-8238b4d70b72"
+                }
+              }
+            },
+            "type": "DataWarehouseTable",
+            "schema": [],
+            "typeProperties": {
+              "schema": "dbo",
+              "table": "Ctrl"
+            }
+          }
+        }
+      },
+      {
+        "name": "ForEach1",
+        "type": "ForEach",
+        "dependsOn": [
+          {
+            "activity": "Lookup1",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "items": {
+            "value": "@activity('Lookup1').output.value",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "name": "Copy data2",
+              "type": "Copy",
+              "dependsOn": [],
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "typeProperties": {
+                "source": {
+                  "type": "DelimitedTextSource",
+                  "storeSettings": {
+                    "type": "LakehouseReadSettings",
+                    "recursive": true,
+                    "enablePartitionDiscovery": false
+                  },
+                  "formatSettings": {
+                    "type": "DelimitedTextReadSettings"
+                  },
+                  "datasetSettings": {
+                    "annotations": [],
+                    "linkedService": {
+                      "name": "Lakehouse01",
+                      "properties": {
+                        "annotations": [],
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                          "workspaceId": "cdda0407-57c3-4b35-a268-cbd5595410e9",
+                          "artifactId": "68e536a7-7633-47d4-b182-ad300c5934f3",
+                          "rootFolder": "Files"
+                        }
+                      }
+                    },
+                    "type": "DelimitedText",
+                    "typeProperties": {
+                      "location": {
+                        "type": "LakehouseLocation",
+                        "fileName": {
+                          "value": "@CONCAT(item().name,'.csv')",
+                          "type": "Expression"
+                        },
+                        "folderPath": "Data02"
+                      },
+                      "columnDelimiter": ",",
+                      "escapeChar": "\\",
+                      "firstRowAsHeader": true,
+                      "quoteChar": "\""
+                    },
+                    "schema": []
+                  }
+                },
+                "sink": {
+                  "type": "DataWarehouseSink",
+                  "allowCopyCommand": true,
+                  "copyCommandSettings": {},
+                  "tableOption": "autoCreate",
+                  "datasetSettings": {
+                    "annotations": [],
+                    "linkedService": {
+                      "name": "TestWareHouse",
+                      "properties": {
+                        "annotations": [],
+                        "type": "DataWarehouse",
+                        "typeProperties": {
+                          "endpoint": "5ki3rr6lzeruvnbsxxxwxcooim-d37ngv6llccetbivqi4ljvyloi.datawarehouse.fabric.microsoft.com",
+                          "artifactId": "4f2562cd-5fb4-4826-a6fe-e32c278e2b95",
+                          "workspaceId": "57d3fe1e-58cb-4984-8515-8238b4d70b72"
+                        }
+                      }
+                    },
+                    "type": "DataWarehouseTable",
+                    "schema": [],
+                    "typeProperties": {
+                      "schema": "dbo",
+                      "table": "@item().name"
+                    }
+                  }
+                },
+                "enableStaging": true,
+                "translator": {
+                  "type": "TabularTranslator",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "variables": {
+      "var1": {
+        "type": "String"
+      }
+    }
+  }
+}

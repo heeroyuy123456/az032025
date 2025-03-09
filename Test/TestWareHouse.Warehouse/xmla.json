@@ -1,0 +1,783 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "2019",
+        "sourceLineageTag": "[dbo].[2019]",
+        "columns": [
+          {
+            "name": "Id_SO",
+            "dataType": "string",
+            "sourceColumn": "Id_SO",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Id_SO",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "monster",
+            "dataType": "string",
+            "sourceColumn": "monster",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "monster",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "date",
+            "dataType": "string",
+            "sourceColumn": "date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "email",
+            "dataType": "string",
+            "sourceColumn": "email",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "email",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "adress",
+            "dataType": "string",
+            "sourceColumn": "adress",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "adress",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "card",
+            "dataType": "string",
+            "sourceColumn": "card",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "card",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Life",
+            "dataType": "string",
+            "sourceColumn": "Life",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Life",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Damage",
+            "dataType": "string",
+            "sourceColumn": "Damage",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Damage",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "2019",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "2020",
+        "sourceLineageTag": "[dbo].[2020]",
+        "columns": [
+          {
+            "name": "Id_SO",
+            "dataType": "string",
+            "sourceColumn": "Id_SO",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Id_SO",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "monster",
+            "dataType": "string",
+            "sourceColumn": "monster",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "monster",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "date",
+            "dataType": "string",
+            "sourceColumn": "date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "email",
+            "dataType": "string",
+            "sourceColumn": "email",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "email",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "adress",
+            "dataType": "string",
+            "sourceColumn": "adress",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "adress",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Special",
+            "dataType": "string",
+            "sourceColumn": "Special",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Special",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "card",
+            "dataType": "string",
+            "sourceColumn": "card",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "card",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Life",
+            "dataType": "string",
+            "sourceColumn": "Life",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Life",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Damage",
+            "dataType": "string",
+            "sourceColumn": "Damage",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Damage",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "2020",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "2021",
+        "sourceLineageTag": "[dbo].[2021]",
+        "columns": [
+          {
+            "name": "Id_SO",
+            "dataType": "string",
+            "sourceColumn": "Id_SO",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Id_SO",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "monster",
+            "dataType": "string",
+            "sourceColumn": "monster",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "monster",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "date",
+            "dataType": "string",
+            "sourceColumn": "date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "email",
+            "dataType": "string",
+            "sourceColumn": "email",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "email",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "adress",
+            "dataType": "string",
+            "sourceColumn": "adress",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "adress",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "card",
+            "dataType": "string",
+            "sourceColumn": "card",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "card",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Life",
+            "dataType": "string",
+            "sourceColumn": "Life",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Life",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Damage",
+            "dataType": "string",
+            "sourceColumn": "Damage",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Damage",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "2021",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Ctrl",
+        "sourceLineageTag": "[dbo].[Ctrl]",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "isActif",
+            "dataType": "boolean",
+            "sourceColumn": "isActif",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "isActif",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Ctrl",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "Test2019",
+        "sourceLineageTag": "[dbo].[Test2019]",
+        "columns": [
+          {
+            "name": "Id_SO",
+            "dataType": "string",
+            "sourceColumn": "Id_SO",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Id_SO",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "monster",
+            "dataType": "string",
+            "sourceColumn": "monster",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "monster",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "date",
+            "dataType": "string",
+            "sourceColumn": "date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "email",
+            "dataType": "string",
+            "sourceColumn": "email",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "email",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "adress",
+            "dataType": "string",
+            "sourceColumn": "adress",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "adress",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "card",
+            "dataType": "string",
+            "sourceColumn": "card",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "card",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Life",
+            "dataType": "string",
+            "sourceColumn": "Life",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Life",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Damage",
+            "dataType": "string",
+            "sourceColumn": "Damage",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Damage",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Test2019",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "summoner",
+        "sourceLineageTag": "[dbo].[summoner]",
+        "columns": [
+          {
+            "name": "id_summoner",
+            "dataType": "int64",
+            "sourceColumn": "id_summoner",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "id_summoner",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Rank",
+            "dataType": "string",
+            "sourceColumn": "Rank",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Rank",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "summoner",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Stored procedure1",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "[dbo].[Clean2021]"
+        },
+        "linkedService": {
+          "name": "TestWareHouse",
+          "properties": {
+            "annotations": [],
+            "type": "DataWarehouse",
+            "typeProperties": {
+              "endpoint": "5ki3rr6lzeruvnbsxxxwxcooim-d37ngv6llccetbivqi4ljvyloi.datawarehouse.fabric.microsoft.com",
+              "artifactId": "4f2562cd-5fb4-4826-a6fe-e32c278e2b95",
+              "workspaceId": "57d3fe1e-58cb-4984-8515-8238b4d70b72"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
